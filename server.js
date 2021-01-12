@@ -28,20 +28,31 @@ app.get("/api/notes", function(req, res) {
 
 app.post("/api/notes", function(req, res) {
     var newNote = req.body;
-    console.log(newNote);
     var notes = [];
     fs.readFile('./db/db.json', (err, data) => {
         if (err) throw err;
         notes = JSON.parse(data);
+        newNote.id = notes.length;
         notes.push(newNote);
-        console.log(notes);
         fs.writeFile('./db/db.json', JSON.stringify(notes), (err) =>
-            err ? console.error(err) : console.log('Success!')
+            err ? console.error(err) : console.log('Note added!')
         );
         res.send(notes);
     });
-    console.log(notes);
-    
+});
+
+app.delete("/api/notes/:id", function(req, res) {
+    var removeNoteId = req.params.id;
+    var notes = [];
+    fs.readFile('./db/db.json', (err, data) => {
+        if (err) throw err;
+        notes = JSON.parse(data);
+        var updatedNotes = notes.filter(note => note.id != removeNoteId);
+        fs.writeFile('./db/db.json', JSON.stringify(updatedNotes), (err) =>
+            err ? console.error(err) : console.log('Note deleted!')
+        );
+        res.send(updatedNotes);
+    });
 });
 
 app.get("*", function(req, res) {
