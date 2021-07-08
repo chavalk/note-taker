@@ -1,60 +1,43 @@
-# note-taker
+# Note Taker
 
 ## Description
 
- The Note Taker application is an express backend application. The interface is very simple as it's primary purpose is to show the ability to connect the front end and the backend for an application to run properly.
+An application built to allow users to take notes and to delete them when the notes are no longer needed.
 
- The application is deployed to Heroku via the link below:
+## What the project does
 
- https://arcane-bastion-29067.herokuapp.com/
+The project allows any user to start taking different notes, to see them, and to delete them when they're no longer needed. Below is a GIF showing the application in action.
 
- When you first navigate to the page, you are taken to the main page that has the name of the application and has a button to get started with the notes. In the backend, the application uses the npm package express to handle the different routes.
+![note-taker](./assets/images/note-taker.gif)
 
- The first and primary route is the "/" route which takes you to the main page. After you click the get started button, the page takes you to the "/notes" route where you see any saved notes and can also add a new note.
+## Why is the project useful
 
- There are three other routes available on the page. The "/api/notes" route to get the date in JSON format. The post route to add a note to the JSON file and return the new list to the user. And the delete route to delete a note from the existing list.
+The project allows users to easily create notes, store them, and delete them when they're no longer needed.
 
- Below is a screenshot of the main page:
+## How can users get started with this project
 
- ![note-taker](./assets/images/main.png)
+Simply navigate to the deployed version of the application at the link listed below.
 
- Below is a screenshot of the notes page:
+https://arcane-bastion-29067.herokuapp.com/
 
- ![note-taker](./assets/images/notes.png)
+## What technologies were used with this project
 
- ## Table of Contents
+* JavaScript
+* HTML
+* CSS
+* Express
+* Path
+* FS
+* Node
 
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
-
-## Installation
-
-The application uses the express npm package. To install the package run npm install express on your computer's terminal.
-
-## Usage
-
-To use the application simply run it using node by typing node server.js on the terminal or navigate to the deployed page using the link above.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-## Contributing
-
-Contributions are currently not accepted for this project.
-
-## Tests
-
-This application does not have any tests in the code.
-
-## Questions
+## Where can users get help with your project
 
 My GitHub username is: chavalk
 
 Link: https://github.com/chavalk
 
 If you have additional questions, feel free to reach me at chavalk@hotmail.com.
+
+## Who maintains and contributes to the project
+
+Currently I'm the only person maintaining and contributing to the project.
