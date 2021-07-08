@@ -1,5 +1,7 @@
 # Note Taker
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Description
 
 An application built to allow users to take notes and to delete them when the notes are no longer needed.
